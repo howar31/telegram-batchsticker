@@ -91,7 +91,7 @@ class Stickers(telepot.aio.helper.ChatHandler):
 
     # Function to check if the name picked by the user is valid, then stores in the packname variable and continues to picking the title.
     async def namehandler(self, msg):
-        packname = msg['text'] + '_by_batchstickerbot'
+        packname = msg['text']
         namevalid = validate_stickers.name(packname)
         try:
             packexists = await bot.getStickerSet(packname)
